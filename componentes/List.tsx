@@ -9,7 +9,7 @@ const Card = ({ text }: CardProps) => {
   return (
     <View>
       <ScrollView style={{ padding: 10 }}>
-        <Text style={styles.cosasQmeGustanMuxoEstails}>text</Text>
+        <Text style={styles.cosasQmeGustanMuxoEstails}>{text}</Text>
       </ScrollView>
     </View>
   );
