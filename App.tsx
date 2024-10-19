@@ -1,82 +1,22 @@
 import { useState } from "react";
-import {
-  Button,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  FlatList,
-} from "react-native";
+import { StyleSheet, Text, View, FlatList } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import Card from "./componentes/List";
-import { cards } from "./Data/Data";
+import { cardsData } from "./Data/Data";
+import Header from "./componentes/Header";
+import { headerData } from "./Data/DataHeader";
+import DescriptionCard from "./componentes/DescriptionCard";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
+
   return (
     <View style={styles.container}>
-      <View style={styles.topContainer}>
-        <Text style={styles.firsttoprowContainer}>My Portfolio App</Text>
-        <View style={styles.rowTopSecondContainer}>
-          <Pressable
-            style={styles.buttonruta}
-            onPress={() => setDisplayMyQR(true)}
-          >
-            <Text
-              style={{
-                ...{
-                  color: "white",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                },
-                ...styles.shadoxboxing,
-              }}
-            >
-              Mi info
-            </Text>
-          </Pressable>
-          <Button
-            onPress={() => setDisplayMyQR(false)}
-            title="Mi Repo"
-            color="light-gray"
-            accessibilityLabel="Un botón pal QR"
-          />
-        </View>
-      </View>
+      <Header text={headerData[0].text} setDisplayMyQR={setDisplayMyQR} />
       {displayMyQR ? (
         <View style={styles.bodystails}>
           <View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Image
-                style={styles.avatar}
-                source={require("./assets/SofyanAmrabat.jpg")}
-              ></Image>
-              <View
-                style={{
-                  margin: 10,
-                  backgroundColor: "lightgray",
-                  padding: 10,
-                  borderRadius: 10,
-                  width: "70%",
-                }}
-              >
-                <Text
-                  style={{
-                    textAlign: "center",
-                    fontWeight: "700",
-                    fontSize: 20,
-                  }}
-                >
-                  Descripción sobre mí!
-                </Text>
-                <Text>
-                  Soy profe y me gusta mi trabajo aunque a veces me de por
-                  enrevesar prácticas para mis queridos alumnos
-                </Text>
-              </View>
-            </View>
+            <DescriptionCard />
             <Text
               style={{
                 color: "beriblak",
@@ -86,10 +26,10 @@ export default function App() {
                 textAlign: "center",
               }}
             >
-              cosas que me gustan mucho:
+              Cosas que me gustan mucho:
             </Text>
             <FlatList
-              data={cards}
+              data={cardsData}
               renderItem={({ item }) => <Card text={item.text} />}
             />
           </View>
@@ -112,27 +52,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  topContainer: {
-    height: "15%",
-    paddingTop: 50,
-    width: "100%",
-  },
-  firsttoprowContainer: {
-    backgroundColor: "gray",
-    textAlign: "center",
-    fontWeight: "bold",
-    textAlignVertical: "center",
-    fontSize: 30,
-  },
-  rowTopSecondContainer: {
-    flexDirection: "row",
-    backgroundColor: "darkgray",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  buttonruta: {
-    width: "50%",
-  },
   bodystails: {
     width: "100%",
     borderWidth: 2,
@@ -141,39 +60,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     height: "85%",
   },
-  avatar: {
-    height: 90,
-    width: 90,
-    borderRadius: 100,
-  },
-  cosasQmeGustanMuxoEstails: {
-    borderColor: "black",
-    borderWidth: 1,
-    borderStyle: "dashed",
-    padding: 20,
-    color: "darkred",
-    textAlign: "center",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: 16,
-    backgroundColor: "silver",
-  },
+
   CentrarcodigoQR: {
     justifyContent: "center",
     borderWidth: 1,
     width: "100%",
     height: "100%",
     alignItems: "center",
-  },
-  shadoxboxing: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
-    shadowOpacity: 0.43,
-    shadowRadius: 9.51,
-
-    elevation: 15,
   },
 });

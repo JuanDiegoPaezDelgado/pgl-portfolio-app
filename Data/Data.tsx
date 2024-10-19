@@ -1,6 +1,4 @@
-import Card, { CardProps } from "./componentes/List.tsx";
-
-export const cards: CardProps[] = [
+export const cardsData = [
   { text: "Salir a pasear" },
   { text: "Senderismo" },
   { text: "Ir a la playita" },

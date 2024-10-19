@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 import React from "react";
 
 export type CardProps = {
@@ -8,9 +8,7 @@ export type CardProps = {
 const Card = ({ text }: CardProps) => {
   return (
     <View>
-      <ScrollView style={{ padding: 10 }}>
-        <Text style={styles.cosasQmeGustanMuxoEstails}>{text}</Text>
-      </ScrollView>
+      <Text style={styles.cosasQmeGustanMuxoEstails}>{text}</Text>
     </View>
   );
 };
