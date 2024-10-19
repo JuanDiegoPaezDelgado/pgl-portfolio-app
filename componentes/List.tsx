@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
+import { styles } from "../css/list.css";
 
 export type CardProps = {
   text: string;
@@ -12,20 +13,5 @@ const Card = ({ text }: CardProps) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  cosasQmeGustanMuxoEstails: {
-    borderColor: "black",
-    borderWidth: 1,
-    borderStyle: "dashed",
-    padding: 20,
-    color: "darkred",
-    textAlign: "center",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: 16,
-    backgroundColor: "silver",
-  },
-});
 
 export default Card;
