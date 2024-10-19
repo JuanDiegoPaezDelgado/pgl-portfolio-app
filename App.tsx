@@ -5,6 +5,7 @@ import Header from "./componentes/Header";
 import { headerData } from "./Data/DataHeader";
 import DescriptionCard from "./componentes/DescriptionCard";
 import { styles } from "./styles/Apptsx.style";
+import MyQr from "./componentes/MyQr";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
@@ -13,19 +14,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header text={headerData[0].text} setDisplayMyQR={setDisplayMyQR} />
-      {displayMyQR ? (
-        <View style={/*isDarkMode ?*/ styles.bodystails}>
-          <View>
-            <DescriptionCard />
-          </View>
-        </View>
-      ) : (
-        <View style={styles.bodystails}>
-          <View style={styles.CentrarcodigoQR}>
-            <QRCode value="https://github.com/JuanDiegoPaezDelgado/pgl-portfolio-app" />
-          </View>
-        </View>
-      )}
+      {displayMyQR ? <DescriptionCard /> : <MyQr />}
     </View>
   );
 }

@@ -8,18 +8,22 @@ import Card from "./List";
 const DescriptionCard = () => {
   return (
     <>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image style={styles.avatar} source={descriptionData.image} />
-        <View style={styles.card}>
-          <Text style={styles.title}>{descriptionData.title}</Text>
-          <Text>{descriptionData.description}</Text>
+      <View style={/*isDarkMode ?*/ styles.bodystails}>
+        <View>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Image style={styles.avatar} source={descriptionData.image} />
+            <View style={styles.card}>
+              <Text style={styles.title}>{descriptionData.title}</Text>
+              <Text>{descriptionData.description}</Text>
+            </View>
+          </View>
+          <Text style={styles.titleText}>Cosas que me gustan mucho:</Text>
+          <FlatList
+            data={cardsData}
+            renderItem={({ item }) => <Card text={item.text} />}
+          />
         </View>
       </View>
-      <Text style={styles.titleText}>Cosas que me gustan mucho:</Text>
-      <FlatList
-        data={cardsData}
-        renderItem={({ item }) => <Card text={item.text} />}
-      />
     </>
   );
 };
