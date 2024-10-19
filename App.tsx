@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { Text, View, FlatList } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import Card from "./componentes/List";
 import { cardsData } from "./Data/Data";
 import Header from "./componentes/Header";
 import { headerData } from "./Data/DataHeader";
 import DescriptionCard from "./componentes/DescriptionCard";
+import { styles } from "./css/app.modules";
 
 export default function App() {
   const [displayMyQR, setDisplayMyQR] = useState(true);
@@ -17,17 +18,7 @@ export default function App() {
         <View style={styles.bodystails}>
           <View>
             <DescriptionCard />
-            <Text
-              style={{
-                color: "beriblak",
-                fontWeight: "900",
-                textTransform: "capitalize",
-                fontSize: 20,
-                textAlign: "center",
-              }}
-            >
-              Cosas que me gustan mucho:
-            </Text>
+            <Text style={styles.titleText}>Cosas que me gustan mucho:</Text>
             <FlatList
               data={cardsData}
               renderItem={({ item }) => <Card text={item.text} />}
@@ -37,35 +28,10 @@ export default function App() {
       ) : (
         <View style={styles.bodystails}>
           <View style={styles.CentrarcodigoQR}>
-            <QRCode value="https://github.com/adhernea" />
+            <QRCode value="https://github.com/JuanDiegoPaezDelgado/pgl-portfolio-app" />
           </View>
         </View>
       )}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  bodystails: {
-    width: "100%",
-    borderWidth: 2,
-    borderColor: "black",
-    alignItems: "center",
-    justifyContent: "space-between",
-    height: "85%",
-  },
-
-  CentrarcodigoQR: {
-    justifyContent: "center",
-    borderWidth: 1,
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
-  },
-});
