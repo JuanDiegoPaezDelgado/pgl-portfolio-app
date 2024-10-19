@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import React from "react";
-import { styles } from "../css/list.css";
+import { styles } from "../styles/list.styles";
 
 export type CardProps = {
   text: string;

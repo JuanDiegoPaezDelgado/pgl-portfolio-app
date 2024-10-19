@@ -1,41 +1,27 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, Image, FlatList } from "react-native";
 import React from "react";
 import { descriptionData } from "../Data/DescriptionData";
+import { styles } from "../styles/Description.style";
+import { cardsData } from "../Data/Data";
+import Card from "./List";
 
 const DescriptionCard = () => {
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
-      <Image style={styles.avatar} source={descriptionData.image} />
-      <View
-        style={{
-          margin: 10,
-          backgroundColor: "lightgray",
-          padding: 10,
-          borderRadius: 10,
-          width: "70%",
-        }}
-      >
-        <Text
-          style={{
-            textAlign: "center",
-            fontWeight: "700",
-            fontSize: 20,
-          }}
-        >
-          {descriptionData.title}
-        </Text>
-        <Text>{descriptionData.description}</Text>
+    <>
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Image style={styles.avatar} source={descriptionData.image} />
+        <View style={styles.card}>
+          <Text style={styles.title}>{descriptionData.title}</Text>
+          <Text>{descriptionData.description}</Text>
+        </View>
       </View>
-    </View>
+      <Text style={styles.titleText}>Cosas que me gustan mucho:</Text>
+      <FlatList
+        data={cardsData}
+        renderItem={({ item }) => <Card text={item.text} />}
+      />
+    </>
   );
 };
-
-const styles = StyleSheet.create({
-  avatar: {
-    height: 90,
-    width: 90,
-    borderRadius: 100,
-  },
-});
 
 export default DescriptionCard;

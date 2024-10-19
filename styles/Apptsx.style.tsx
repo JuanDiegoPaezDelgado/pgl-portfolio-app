@@ -1,4 +1,3 @@
-// styles.js
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -9,12 +8,13 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   bodystails: {
+    marginTop: -5,
     width: "100%",
     borderWidth: 2,
     borderColor: "black",
     alignItems: "center",
     justifyContent: "space-between",
-    height: "85%",
+    height: "87.5%",
   },
   CentrarcodigoQR: {
     justifyContent: "center",
@@ -22,12 +22,5 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     alignItems: "center",
-  },
-  titleText: {
-    color: "beriblak",
-    fontWeight: "900",
-    textTransform: "capitalize",
-    fontSize: 20,
-    textAlign: "center",
   },
 });
