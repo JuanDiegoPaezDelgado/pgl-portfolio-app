@@ -43,7 +43,7 @@ export const styles = StyleSheet.create({
   },
   CentrarcodigoQR: {
     justifyContent: "center",
-    borderWidth: 1,
+    borderWidth: 0,
     width: "100%",
     height: "100%",
     alignItems: "center",

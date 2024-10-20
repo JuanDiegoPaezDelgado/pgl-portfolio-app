@@ -14,7 +14,6 @@ export const cardsData = [
 ];
 
 export const dontLikeCardsData = [
-  { text: "Adrian" },
   { text: "Programacion multimedia" },
   { text: "Programacion de servicios" },
   { text: "El calor" },

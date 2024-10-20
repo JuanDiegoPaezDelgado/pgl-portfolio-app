@@ -26,6 +26,6 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: "white",
     borderRadius: 100,
-    margin: 5,
+    margin: 20,
   },
 });

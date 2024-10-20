@@ -44,7 +44,7 @@ const Header = ({
           </Text>
         </Pressable>
         <Button
-          onPress={() => setDisplayMyQR(true)}
+          onPress={() => setDisplayMyQR(false)}
           title={headerData[1].text}
           color={isDarkMode ? "darkgray" : "lightgray"}
           accessibilityLabel="Un botón pal QR"

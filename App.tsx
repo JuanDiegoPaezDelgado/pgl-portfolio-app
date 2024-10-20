@@ -7,7 +7,7 @@ import { styles } from "./styles/Apptsx.style";
 import MyQr from "./componentes/MyQr";
 
 export default function App() {
-  const [displayMyQR, setDisplayMyQR] = useState(true);
+  const [displayMyQR, setDisplayMyQR] = useState(false);
   const [isDarkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
