@@ -41,4 +41,13 @@ export const styles = StyleSheet.create({
     height: "100%",
     alignItems: "center",
   },
+  lightCards: {
+    margin: 10,
+    backgroundColor: "white",
+    padding: 10,
+    borderRadius: 10,
+    width: "70%",
+    borderColor: "black",
+    borderWidth: 1,
+  },
 });

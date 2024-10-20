@@ -5,14 +5,18 @@ import { styles } from "../styles/Description.style";
 import { cardsData } from "../Data/Data";
 import Card from "./List";
 
-const DescriptionCard = () => {
+export type DescriptionProps = {
+  isDarkMode: boolean;
+};
+
+const DescriptionCard = ({ isDarkMode }: DescriptionProps) => {
   return (
     <>
-      <View style={/*isDarkMode ?*/ styles.bodystails}>
+      <View style={styles.bodystails}>
         <View>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Image style={styles.avatar} source={descriptionData.image} />
-            <View style={styles.card}>
+            <View style={isDarkMode ? styles.card : styles.lightCards}>
               <Text style={styles.title}>{descriptionData.title}</Text>
               <Text>{descriptionData.description}</Text>
             </View>
