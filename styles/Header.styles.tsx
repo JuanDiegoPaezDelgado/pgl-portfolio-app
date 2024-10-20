@@ -12,7 +12,13 @@ export const styles = StyleSheet.create({
     borderColor: "black",
   },
   firsttoprowContainer: {
-    backgroundColor: "gray",
+    backgroundColor: "lightgray",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 30,
+  },
+  darkfirsttoprowContainer: {
+    backgroundColor: "white",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 30,
@@ -37,7 +43,7 @@ export const styles = StyleSheet.create({
     elevation: 15,
   },
   bar: {
-    color: "white",
+    color: "black",
     fontWeight: "bold",
     textTransform: "uppercase",
     marginLeft: 50,
