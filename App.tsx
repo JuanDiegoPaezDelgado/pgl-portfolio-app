@@ -17,12 +17,13 @@ export default function App() {
   return (
     <View style={isDarkMode ? styles.darkContainer : styles.container}>
       <Header
+        isDarkMode={isDarkMode}
         text={headerData[0].text}
         setDisplayMyQR={setDisplayMyQR}
         setDarkMode={setDarkMode}
         handleDarkMode={handleDarkMode}
       />
-      {displayMyQR ? <DescriptionCard isLightMode={isDarkMode} /> : <MyQr />}
+      {displayMyQR ? <DescriptionCard isDarkMode={isDarkMode} /> : <MyQr />}
     </View>
   );
 }

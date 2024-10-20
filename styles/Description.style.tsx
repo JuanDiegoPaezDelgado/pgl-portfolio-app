@@ -6,9 +6,10 @@ export const styles = StyleSheet.create({
     width: 90,
     borderRadius: 100,
   },
+  container: { flexDirection: "row", alignItems: "center" },
   card: {
     margin: 10,
-    backgroundColor: "lightgray",
+    backgroundColor: "white",
     padding: 10,
     borderRadius: 10,
     width: "70%",
@@ -43,7 +44,7 @@ export const styles = StyleSheet.create({
   },
   lightCards: {
     margin: 10,
-    backgroundColor: "white",
+    backgroundColor: "lightgray",
     padding: 10,
     borderRadius: 10,
     width: "70%",

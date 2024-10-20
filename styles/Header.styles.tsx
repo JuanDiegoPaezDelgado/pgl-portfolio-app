@@ -6,6 +6,11 @@ export const styles = StyleSheet.create({
     paddingTop: 50,
     width: "100%",
   },
+  darkicon: {
+    marginLeft: 50,
+    borderWidth: 2,
+    borderColor: "black",
+  },
   firsttoprowContainer: {
     backgroundColor: "gray",
     textAlign: "center",
@@ -13,10 +18,9 @@ export const styles = StyleSheet.create({
     fontSize: 30,
   },
   rowTopSecondContainer: {
-    display: "flex",
     flexDirection: "row",
     backgroundColor: "darkgray",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     alignItems: "center",
   },
   buttonruta: {
@@ -36,5 +40,6 @@ export const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     textTransform: "uppercase",
+    marginLeft: 50,
   },
 });

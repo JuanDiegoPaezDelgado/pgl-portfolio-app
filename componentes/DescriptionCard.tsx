@@ -14,7 +14,7 @@ const DescriptionCard = ({ isDarkMode }: DescriptionProps) => {
     <>
       <View style={styles.bodystails}>
         <View>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View style={styles.container}>
             <Image style={styles.avatar} source={descriptionData.image} />
             <View style={isDarkMode ? styles.card : styles.lightCards}>
               <Text style={styles.title}>{descriptionData.title}</Text>

@@ -9,9 +9,14 @@ export type HeaderProps = {
   setDisplayMyQR: (value: boolean) => void;
   setDarkMode: (value: boolean) => void;
   handleDarkMode: () => void;
+  isDarkMode: boolean;
 };
 
-const Header = ({ setDisplayMyQR, handleDarkMode }: HeaderProps) => {
+const Header = ({
+  setDisplayMyQR,
+  handleDarkMode,
+  isDarkMode,
+}: HeaderProps) => {
   return (
     <View style={styles.topContainer}>
       <Text style={styles.firsttoprowContainer}>{headerData[0].text}</Text>
@@ -27,11 +32,11 @@ const Header = ({ setDisplayMyQR, handleDarkMode }: HeaderProps) => {
         <Button
           onPress={() => setDisplayMyQR(true)}
           title={headerData[1].text}
-          color="light-gray"
+          color={isDarkMode ? "lightgray" : "black"}
           accessibilityLabel="Un botón pal QR"
         />
         {
-          <Pressable onPress={handleDarkMode}>
+          <Pressable style={styles.darkicon} onPress={handleDarkMode}>
             <Ionicons name="contrast" size={24} color="black" />
           </Pressable>
         }
