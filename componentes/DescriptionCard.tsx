@@ -12,7 +12,7 @@ export type DescriptionProps = {
 const DescriptionCard = ({ isDarkMode }: DescriptionProps) => {
   return (
     <>
-      <View style={styles.bodystails}>
+      <View style={isDarkMode ? styles.bodystails : styles.darkBodyTails}>
         <View>
           <View style={styles.container}>
             <Image style={styles.avatar} source={descriptionData.image} />

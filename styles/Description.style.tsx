@@ -35,6 +35,15 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     height: "87.5%",
   },
+  darkBodyTails: {
+    marginTop: -5,
+    width: "100%",
+    borderWidth: 0,
+    borderColor: "white",
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: "87.5%",
+  },
   CentrarcodigoQR: {
     justifyContent: "center",
     borderWidth: 1,

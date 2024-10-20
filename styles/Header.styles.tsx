@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   topContainer: {
-    height: "15%",
+    height: "14.8%",
     paddingTop: 50,
     width: "100%",
   },
@@ -29,6 +29,15 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  darkRowTopSecondContainer: {
+    flexDirection: "row",
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    borderColor: "black",
+    borderWidth: 2,
+    borderBottomWidth: 2,
+  },
   buttonruta: {
     width: "50%",
   },
@@ -47,5 +56,8 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     marginLeft: 50,
+  },
+  darkbutton: {
+    color: "black",
   },
 });

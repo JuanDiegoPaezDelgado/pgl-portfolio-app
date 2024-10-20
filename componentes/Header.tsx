@@ -28,7 +28,13 @@ const Header = ({
       >
         {headerData[0].text}
       </Text>
-      <View style={styles.rowTopSecondContainer}>
+      <View
+        style={
+          isDarkMode
+            ? styles.rowTopSecondContainer
+            : styles.darkRowTopSecondContainer
+        }
+      >
         <Pressable
           style={styles.buttonruta}
           onPress={() => setDisplayMyQR(true)}
@@ -40,9 +46,10 @@ const Header = ({
         <Button
           onPress={() => setDisplayMyQR(true)}
           title={headerData[1].text}
-          color={isDarkMode ? "lightgray" : "gray"}
+          color={isDarkMode ? "darkgray" : "lightgray"}
           accessibilityLabel="Un botón pal QR"
         />
+
         {
           <Pressable style={styles.darkicon} onPress={handleDarkMode}>
             <Ionicons name="contrast" size={24} color="black" />
