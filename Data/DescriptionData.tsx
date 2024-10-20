@@ -2,5 +2,5 @@ export const descriptionData = {
   image: require("../assets/SofyanAmrabat.jpg"),
   title: "Descripción sobre mí!",
   description:
-    "Soy profe y me gusta mi trabajo aunque a veces me de por enrevesar prácticas para mis queridos alumnos",
+    "Soy un estudiante de 2 dam en salesianos la cuesta, estoy aprendiendo a programar para poder trabajar y no morirme de hambre",
 };

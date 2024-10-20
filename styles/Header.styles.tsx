@@ -28,6 +28,9 @@ export const styles = StyleSheet.create({
     backgroundColor: "darkgray",
     justifyContent: "center",
     alignItems: "center",
+    borderColor: "black",
+    borderWidth: 2,
+    borderBottomWidth: 2,
   },
   darkRowTopSecondContainer: {
     flexDirection: "row",

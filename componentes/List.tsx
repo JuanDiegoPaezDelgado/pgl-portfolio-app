@@ -4,12 +4,21 @@ import { styles } from "../styles/List.styles";
 
 export type CardProps = {
   text: string;
+  isDarkMode: boolean;
 };
 
-const Card = ({ text }: CardProps) => {
+const Card = ({ text, isDarkMode }: CardProps) => {
   return (
     <View>
-      <Text style={styles.cosasQmeGustanMuxoEstails}>{text}</Text>
+      <Text
+        style={
+          isDarkMode
+            ? styles.cosasQmeGustanMuxoEstails
+            : styles.darkcosasQmeGustanMuxoEstails
+        }
+      >
+        {text}
+      </Text>
     </View>
   );
 };
