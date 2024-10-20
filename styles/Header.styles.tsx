@@ -13,9 +13,10 @@ export const styles = StyleSheet.create({
     fontSize: 30,
   },
   rowTopSecondContainer: {
+    display: "flex",
     flexDirection: "row",
     backgroundColor: "darkgray",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     alignItems: "center",
   },
   buttonruta: {
